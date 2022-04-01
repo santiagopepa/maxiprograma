@@ -319,60 +319,59 @@ function Esprimo(){
     }
 }
 
-//FALTA COMPLETAR
-/*
-
-function maximo(){
+function maximoyposicion(){
    
-        let numeros = [];
-        for(i=0 ; i < 4; i++){
-        let n = prompt('ingresar numero')
-            numeros.push(n)
+        let maximo = []
+        let posicion = 0
+        for(x=0 ; x < 10; x++){
+        n = prompt('ingresar numero')
+            if (x == 0){
+                maximo.push(n)
+                posicion = 1
+            } if(n>maximo){
+                maximo = n
+                posicion++
+            }
         }
-        let mayor = Math.max.apply(null,numeros)
-        let indice = numeros.indexOf(mayor)
-
-        console.log(mayor)
-        console.log(indice)
-    
-}
-
+        console.log('el mayor numero es el ' +maximo)
+        console.log('y se encuentra en la posicion '+posicion)
+  }
 
 
 function personamaschica(){
 
-        let numeros = [];
-        for(i=0 ; i < 4; i++){
-        let n = prompt('ingresar numero')
-            numeros.push(n)
+    minimo = []
+    posicion = 0
+
+    for(x = 0; x < 20;x++){
+        n = prompt('ingresar un numero')
+        if(x == 0){
+            minimo.push(n)
+            posicion = 1
+        } if(n<minimo){
+            minimo = n
+            posicion++
         }
-        console.log(numeros)
-
-        let menor = Math.min.apply(null,numeros)
-
-        alert(menor)
-
+    }
+    console.log('el menor numero es el '+ minimo);
+    console.log('y se encuentra en la posicion ' + posicion)
 }
 
 
-function promediomayores(){
-
-        let numerosmayores = [];
-        let cantidad = numerosmayores.length
-        for(i=0 ; i < 4; i++){
-        let n = parseInt(prompt('ingresar numero'))
+function promediomayoress(){
+        let mayores = 0;
+        let cantidad = 0;
+        for(x=0 ; x < 4; x++){
+        n = parseInt(prompt('ingresar numero'))
             if(n > 18){
-                numerosmayores.push(n)
-                let total = numerosmayores / numerosmayores.length
-                total += cantidad
-            } 
+                mayores += n
+                cantidad++
+            }
+        let promedio1 = (mayores / cantidad)
         }
-
-        console.log(numerosmayores)
+        console.log(mayores);
         console.log(cantidad)
-       
+        console.log(promedio1)
 }
 
-promediomayores()
-
-*/
+promediomayoress()
