@@ -361,17 +361,63 @@ function personamaschica(){
 function promediomayoress(){
         let mayores = 0;
         let cantidad = 0;
-        for(x=0 ; x < 4; x++){
+        for(x=0 ; x < 20; x++){
         n = parseInt(prompt('ingresar numero'))
             if(n > 18){
                 mayores += n
                 cantidad++
             }
-        let promedio1 = (mayores / cantidad)
         }
-        console.log(mayores);
-        console.log(cantidad)
-        console.log(promedio1)
+        let promedio18 = mayores/cantidad
+      
+        console.log(promedio18)
 }
 
-promediomayoress()
+function maximodelospares(){
+    let par = []
+    let impar = []
+    for(x = 0 ;x<20;x++){
+    n = prompt('Ingrese los numeros')
+        if(n % 2 == 0){
+            par.push(n)
+        } else {
+            impar.push(n)
+        }
+    }
+
+    let mayorpar =  Math.max.apply(null,par)
+    let menorimpar = Math.min.apply(null,impar)
+
+    console.log(mayorpar)
+    console.log(menorimpar)
+
+}
+
+function mayordelosprimos(){
+    let primo = 0
+
+    for(x=0;x<3;x++){
+        n = prompt('un nuevo numero')
+    }
+    let contador = 0
+    for (i = 1; i<=n ; i++){
+        if(n % i === 0){
+            contador++
+        } if (contador === 2) {
+            console.log('es primo')
+        }if (!primo){
+            maximoprimo = n
+            primo = 1
+        } if(n > maximoprimo){
+            maximoprimo = n
+        }
+    }   
+    console.log(primo)
+}
+
+mayordelosprimos()
+
+/*
+
+let mayordelosprimos = Math.max.apply(null,mayor)
+console.log(mayordelosprimos) */
